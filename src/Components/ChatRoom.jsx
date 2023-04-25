@@ -1,37 +1,37 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FlatList, View, Text,ScrollView } from 'react';
+import { FlatList, View, Text, ScrollView } from 'react';
 
 
 function ChatRoom() {
   const [messages, setMessages] = useState([]);
   const [newMessages, setNewMessages] = useState('');
 
-  
+
   const sendMessage = (event) => {
     event.preventDefault();
-    axios.post('/api/messages',{ message : newMessages})
+    axios.post('/api/messages', { message: newMessages })
       .then(response => setMessages([...messages, response.data]))
       .catch(error => console.error(error));
-      setMessages('');
+    setMessages('');
   };
-  
-  function sendMessages(){
+
+  function sendMessages() {
     alert("You have sent a message")
-  } 
+  }
 
   return (
-    
-    <div>
-      
-      
-        <form onSubmit={sendMessage}>
-        <input
-        type="text"
-        value={newMessages}
-        onChange={(event) => setNewMessages(event.target.value)}/>
 
-      
+    <div>
+
+
+      <form onSubmit={sendMessage}>
+        <input
+          type="text"
+          value={newMessages}
+          onChange={(event) => setNewMessages(event.target.value)} />
+
+
       </form>
       <button onClick={sendMessages}>Send Message</button>
 
@@ -42,11 +42,11 @@ function ChatRoom() {
           <li key={index}>{message}</li>
         ))}
       </ul>
-      
- 
 
-    
-     </div>
+
+
+
+    </div>
   );
 }
 

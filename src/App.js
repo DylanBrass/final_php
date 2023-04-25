@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import ChatRoom from './ChatRoom';
+import ChatRoom from './Components/ChatRoom';
+import ChatDisplay from './Components/ChatDisplay';
 
 function App() {
   return (
     <div>
-    <ChatRoom></ChatRoom>
+      <ChatDisplay />
+      <ChatRoom />
     </div>
   );
 }
