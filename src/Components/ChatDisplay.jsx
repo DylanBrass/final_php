@@ -12,9 +12,10 @@ function ChatDisplay() {
         axios.get("http://127.0.0.1:8000/api/messages/users/3&&1")
             .then(function (response) {
                 if (response.status === 200) {
-                    console.log(response);
 
+                    console.log(response.data)
                     setMessages(response.data);
+
 
 
                 }
@@ -44,14 +45,13 @@ function ChatDisplay() {
         <div>
             {
                 messages.map((message) => (
-                    <div
-                        key={message.id}
-                    >
-                        {message.message_id}
+
+                    < div >
+                        {message.message.description}
                     </div>
                 ))
             }
-        </div>
+        </div >
     )
 }
 
