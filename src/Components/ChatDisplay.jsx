@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import DisplayMessages from './DisplayMessages';
 
 
 
@@ -45,10 +46,9 @@ function ChatDisplay() {
         <div>
             {
                 messages.map((message) => (
-
-                    < div >
-                        {message.message.description}
-                    </div>
+                    <DisplayMessages
+                        message={message}
+                    />
                 ))
             }
         </div >
