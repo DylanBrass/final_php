@@ -14,8 +14,10 @@ function Login({ onLoginSuccess }) {
       .post('http://127.0.0.1:8000/api/users/login', { username, password })
       .then((response) => {
         if (response.status === 200) {
-          sessionStorage.setItem('user', JSON.stringify(response.data));
-          onLoginSuccess(); // Call onLoginSuccess when login is successful
+          if (response.data != []) {
+            sessionStorage.setItem('user', JSON.stringify(response.data));
+            onLoginSuccess(); // Call onLoginSuccess when login is successful
+          }
         }
       })
       .catch(function (error) {
