@@ -10,15 +10,19 @@ function ChatRoom() {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    axios.post('/api/messages', { message: newMessages })
+
+    console.log(sessionStorage.getItem('user').id)
+    axios.post('http://127.0.0.1:8000/api/messages', {
+      description: event.target.elements.desc.value,
+      sender_id: JSON.parse(sessionStorage.getItem('user')).id,
+      receiver_id: sessionStorage.getItem('targetUser')
+    })
       .then(response => setMessages([...messages, response.data]))
       .catch(error => console.error(error));
     setMessages('');
   };
 
-  function sendMessages() {
-    alert("You have sent a message")
-  }
+
 
   return (
 
@@ -27,21 +31,13 @@ function ChatRoom() {
 
       <form onSubmit={sendMessage}>
         <input
-          type="text"
-          value={newMessages}
-          onChange={(event) => setNewMessages(event.target.value)} />
+          name='desc'
+        />
 
+        <button type='submit'>Send Message</button>
 
       </form>
-      <button onClick={sendMessages}>Send Message</button>
 
-      {/* Render chat messages here */}
-      {/* Render input field and send button here */}
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>{message}</li>
-        ))}
-      </ul>
 
 
 

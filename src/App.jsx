@@ -27,6 +27,11 @@ function App() {
           <ChatDisplay />
           <ChatRoom />
           <DisplayUsers />
+          <button onClick={() => {
+            sessionStorage.clear();
+            window.location.reload()
+          }}>Log out</button>
+
         </>
       )}
     </div>

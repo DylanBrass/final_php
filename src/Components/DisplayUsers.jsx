@@ -31,6 +31,7 @@ function DisplayUsers() {
         <div>
             {
                 users.map((user) => (
+
                     <DisplayUsersTemplate
                         user={user}
                     />

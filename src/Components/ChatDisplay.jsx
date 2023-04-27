@@ -9,7 +9,7 @@ function ChatDisplay() {
 
 
     const loadMessages = () => {
-        axios.get("http://127.0.0.1:8000/api/messages/users/" + JSON.parse(sessionStorage.getItem('user')).id + "&&3")
+        axios.get("http://127.0.0.1:8000/api/messages/users/" + JSON.parse(sessionStorage.getItem('user')).id + "&&" + sessionStorage.getItem('targetUser'))
             .then(function (response) {
                 if (response.status === 200) {
 
@@ -32,7 +32,7 @@ function ChatDisplay() {
     useEffect(() => {
         const interval = setInterval(() => {
             loadMessages();
-        }, 2000);
+        }, 1000);
 
         return () => clearInterval(interval);
     }, []);
