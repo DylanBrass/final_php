@@ -26,13 +26,20 @@ function DisplayUsers() {
         loadUsers();
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            loadUsers();
+        }, 15000);
 
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div>
             {
                 users.map((user) => (
 
                     <DisplayUsersTemplate
+                        key={user.id}
                         user={user}
                     />
                 ))}

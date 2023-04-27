@@ -4,7 +4,7 @@ function DisplayUsersTemplate({ user }) {
     return (
         <div onClick={() => {
             sessionStorage.setItem('targetUser', user.id)
-            console.log(sessionStorage.getItem('targetUser'));
+            console.log(sessionStorage.getItem('targetUser'))
         }
         }
             style={JSON.parse(sessionStorage.getItem('user')).id == user.id ? { display: 'none' } : {}}
