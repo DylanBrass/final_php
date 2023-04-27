@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function Login({ onLoginSuccess }) {
+
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,7 +14,7 @@ function Login({ onLoginSuccess }) {
       .post('http://127.0.0.1:8000/api/users/login', { username, password })
       .then((response) => {
         if (response.status === 200) {
-          console.log(response.data);
+          sessionStorage.setItem('user', JSON.stringify(response.data));
           onLoginSuccess(); // Call onLoginSuccess when login is successful
         }
       })
@@ -21,6 +23,9 @@ function Login({ onLoginSuccess }) {
         console.log(error);
       });
   };
+
+
+
 
   return (
     <form onSubmit={handleSubmit}>

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DisplayMessages from './DisplayMessages';
@@ -10,11 +9,10 @@ function ChatDisplay() {
 
 
     const loadMessages = () => {
-        axios.get("http://127.0.0.1:8000/api/messages/users/3&&1")
+        axios.get("http://127.0.0.1:8000/api/messages/users/" + JSON.parse(sessionStorage.getItem('user')).id + "&&3")
             .then(function (response) {
                 if (response.status === 200) {
 
-                    console.log(response.data)
                     setMessages(response.data);
 
 

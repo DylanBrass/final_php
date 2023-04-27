@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import ChatRoom from './Components/ChatRoom';
 import ChatDisplay from './Components/ChatDisplay';
 import Login from './Components/Login';
+import DisplayUsers from './Components/DisplayUsers';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
+  useEffect(() => {
+    if (sessionStorage.getItem('user') != null)
+      handleLoginSuccess();
+  }, [])
+
   const handleLoginSuccess = () => {
+    document.title = JSON.parse(sessionStorage.getItem('user')).username
     setIsLoggedIn(true);
   };
 
@@ -19,6 +26,7 @@ function App() {
         <>
           <ChatDisplay />
           <ChatRoom />
+          <DisplayUsers />
         </>
       )}
     </div>
