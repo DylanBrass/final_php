@@ -4,6 +4,7 @@ import ChatRoom from './Components/ChatRoom';
 import ChatDisplay from './Components/ChatDisplay';
 import Login from './Components/Login';
 import DisplayUsers from './Components/DisplayUsers';
+import Register from './Components/Register';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,7 +22,15 @@ function App() {
 
   return (
     <div>
-      {!isLoggedIn && <Login onLoginSuccess={handleLoginSuccess} />}
+      {!isLoggedIn && (
+        <>
+          <Login onLoginSuccess={handleLoginSuccess} />
+          <div>
+            Create a user ?
+          </div>
+          <Register onLoginSuccess={handleLoginSuccess} />
+        </>
+      )}
       {isLoggedIn && (
         <>
           <ChatDisplay />
@@ -29,6 +38,7 @@ function App() {
           <DisplayUsers />
           <button onClick={() => {
             sessionStorage.clear();
+            setIsLoggedIn(false);
             window.location.reload()
           }}>Log out</button>
 
