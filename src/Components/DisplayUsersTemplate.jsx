@@ -3,7 +3,7 @@ import React from 'react'
 function DisplayUsersTemplate({ user }) {
     return (
         <div onClick={() => {
-            sessionStorage.setItem('targetUser', user.id)
+            sessionStorage.setItem('targetUser', JSON.stringify(user))
             console.log(sessionStorage.getItem('targetUser'))
         }
         }

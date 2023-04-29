@@ -21,7 +21,7 @@ function ChatRoom() {
       formData.append('image', "");
     }
     formData.append('sender_id', JSON.parse(sessionStorage.getItem('user')).id);
-    formData.append('receiver_id', sessionStorage.getItem('targetUser'));
+    formData.append('receiver_id', JSON.parse(sessionStorage.getItem('targetUser')).id);
 
     axios.post('http://127.0.0.1:8000/api/messages', formData, {
       headers: {

@@ -9,22 +9,23 @@ function ChatDisplay() {
 
 
     const loadMessages = () => {
-        if (JSON.parse(sessionStorage.getItem('user')).id != null && sessionStorage.getItem('targetUser') != null) {
-            axios.get("http://127.0.0.1:8000/api/messages/users/" + JSON.parse(sessionStorage.getItem('user')).id + "&&" + sessionStorage.getItem('targetUser'))
-                .then(function (response) {
-                    if (response.status === 200) {
+        if (sessionStorage.getItem('user') != null && sessionStorage.getItem('targetUser') != null) {
+            if (JSON.parse(sessionStorage.getItem('user')).id !== null && JSON.parse(sessionStorage.getItem('targetUser')).id !== null) {
+                axios.get("http://127.0.0.1:8000/api/messages/users/" + JSON.parse(sessionStorage.getItem('user')).id + "&&" + JSON.parse(sessionStorage.getItem('targetUser')).id)
+                    .then(function (response) {
+                        if (response.status === 200) {
 
-                        setMessages(response.data);
+                            setMessages(response.data);
 
 
 
-                    }
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
-
+                        }
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+            }
         }
     }
     useEffect(() => {
@@ -44,6 +45,7 @@ function ChatDisplay() {
 
     return (
         <div>
+            {sessionStorage.getItem('targetUser') !== null && <h1>{JSON.parse(sessionStorage.getItem('targetUser')).username}</h1>}
             {
                 messages.map((message) => (
                     <DisplayMessages
