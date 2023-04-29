@@ -32,17 +32,17 @@ function Login({ onLoginSuccess }) {
           <input
             type="text"
             value={username}
+            placeholder="username"
             onChange={(event) => setUsername(event.target.value)}
           />
-          <span>Username</span>
         </div>
         <div class="inputbox">
           <input
             type="password"
             value={password}
+            placeholder="password"
             onChange={(event) => setPassword(event.target.value)}
           />
-          <span>Password</span>
         </div>
         <button class="submitButton" type="submit">Login</button>
       </form>

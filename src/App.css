@@ -9,15 +9,21 @@ body {
   background: radial-gradient(circle, rgba(0,251,198,1) 0%, rgba(167,37,37,1) 100%, rgba(98,255,5,1) 100%);
   font-family: "Sansita Swashed", cursive;
 }
+
 .center {
   position: relative;
   padding: 50px 50px;
   background: #fff;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
 .center h1 {
   font-size: 2em;
-  border-left: 5px solid rgba(167,37,37,1);
+  border-left: 5px solid dodgerblue;
   padding: 10px;
   color: #000;
   letter-spacing: 5px;
@@ -25,12 +31,15 @@ body {
   font-weight: bold;
   padding-left: 10px;
 }
+
+
 .center .inputbox {
   position: relative;
   width: 300px;
   height: 50px;
-  margin-bottom: 50px;
+  margin: 10px;
 }
+
 .center .inputbox input {
   position: absolute;
   top: 0;
@@ -43,9 +52,11 @@ body {
   border-radius: 10px;
   font-size: 1.2em;
 }
+
 .center .inputbox:last-child {
   margin-bottom: 0;
 }
+
 .center .inputbox span {
   position: absolute;
   top: 14px;
@@ -54,6 +65,7 @@ body {
   transition: 0.6s;
   font-family: sans-serif;
 }
+
 .center .inputbox input:focus ~ span,
 .center .inputbox input:valid ~ span {
   transform: translateX(-13px) translateY(-35px);
@@ -72,8 +84,9 @@ body {
   background-color: rgba(0,251,198,1);
   border: none;
   border-radius: 15px;
+  margin-top: 20px; /* added margin property to create space between input boxes and submit button */
 }
+
 .submitButton:hover {
   background:rgba(167,37,37,1) 100%;
 }
-

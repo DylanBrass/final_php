@@ -21,14 +21,19 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       {!isLoggedIn && (
         <>
-          <Login onLoginSuccess={handleLoginSuccess} />
-          <div>
-            Create a user ?
+          <div style={{ marginRight: "20px" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Login onLoginSuccess={handleLoginSuccess} />
+            </div>
           </div>
-          <Register onLoginSuccess={handleLoginSuccess} />
+          <div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Register onLoginSuccess={handleLoginSuccess} />
+            </div>
+          </div>
         </>
       )}
       {isLoggedIn && (
@@ -36,12 +41,15 @@ function App() {
           <ChatDisplay />
           <ChatRoom />
           <DisplayUsers />
-          <button onClick={() => {
-            sessionStorage.clear();
-            setIsLoggedIn(false);
-            window.location.reload()
-          }}>Log out</button>
-
+          <button
+            onClick={() => {
+              sessionStorage.clear();
+              setIsLoggedIn(false);
+              window.location.reload();
+            }}
+          >
+            Log out
+          </button>
         </>
       )}
     </div>
