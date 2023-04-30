@@ -22,37 +22,43 @@ function App() {
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      {!isLoggedIn && (
-        <>
-          <div style={{ marginRight: "20px" }}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Login onLoginSuccess={handleLoginSuccess} />
-            </div>
+    {!isLoggedIn && (
+      <>
+        <div style={{ marginRight: "20px" }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Login onLoginSuccess={handleLoginSuccess} />
           </div>
-          <div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Register onLoginSuccess={handleLoginSuccess} />
-            </div>
+        </div>
+        <div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Register onLoginSuccess={handleLoginSuccess} />
           </div>
-        </>
-      )}
-      {isLoggedIn && (
-        <>
-          <ChatDisplay />
+        </div>
+      </>
+    )}
+    {isLoggedIn && (
+      <>
+        <div>
+        <ChatDisplay />
           <ChatRoom />
-          <DisplayUsers />
-          <button
+          <button className='submitButton'
             onClick={() => {
               sessionStorage.clear();
               setIsLoggedIn(false);
               window.location.reload();
             }}
+            style={{ marginTop: "10px" }}
           >
             Log out
           </button>
-        </>
-      )}
-    </div>
+        </div>
+        <div style={{ margin: "20px" }}>
+          Recipients:
+        <DisplayUsers />
+        </div>
+      </>
+    )}
+  </div>
   );
 }
 

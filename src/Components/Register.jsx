@@ -58,7 +58,7 @@ function Register({ onLoginSuccess }) {
           <div class="inputbox">
             <input placeholder="email" name="email" />
           </div>
-          <button class="submitButton" type="submit">Create Account</button>
+          <button className="submitButton" type="submit">Create Account</button>
         </form>
       </div>
     </>

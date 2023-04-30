@@ -4,7 +4,7 @@ function DisplayMessages({ message }) {
     console.log(message)
     return (
         <>
-            <div style={message.sender_id === JSON.parse(sessionStorage.getItem('user')).id ? { textAlign: 'right', color: "white", background: "blue" } : { textAlign: 'left' }}
+            <div className={message.sender_id === JSON.parse(sessionStorage.getItem('user')).id ? "bubble right" : "bubble left"}
             >
                 <p>
                     {message.message.description}

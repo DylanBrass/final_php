@@ -44,7 +44,7 @@ function Login({ onLoginSuccess }) {
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>
-        <button class="submitButton" type="submit">Login</button>
+        <button className="submitButton" type="submit">Login</button>
       </form>
     </div>
   );
