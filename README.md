@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Create React App - Chat Room PHP Project Front End
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,11 +39,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-# The Greatest Teacher_FrontEnd
-
-## Project Overview
-Done throughout my second year of College in Computer Science for my Java class, the Greatest Teacher project's purpose was to develop an application that allows a user to rate teachers and view their performances using Axios for the HTTP requests and React libraries for the UI. This is the front-end documentation of the project.
-
 ## Table of Contents
 - [Project Description](#project-description)
 - [Technologies used](#technologies)
@@ -60,7 +55,8 @@ The application is a dynamic chat room where users gain access by signing in wit
 
 #### Login and Sign in
 ![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/0ba80f0a-c4d8-459e-b0a8-f0e759b64b49)
-#### Chat Session![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/3d50c0cc-8128-4d64-b0c0-d618ce8c2ff5)
+#### Chat Session
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/3d50c0cc-8128-4d64-b0c0-d618ce8c2ff5)
 ![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/cde627a8-987b-4dbe-b45d-7f5a046a237b)
 #### Sending Images
 ![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/60cc2350-101b-4d7b-8bbe-900321dd0452)
@@ -68,7 +64,12 @@ The application is a dynamic chat room where users gain access by signing in wit
 
 <a name="technologies"></a>
 ## Technologies used when building the application
-The front-end was done with React, HTML and CSS. Different components such as Login, Register, and ChatRoom were created to comply to the principle of separation of concern. We used axios to make the HTTP requests and some React library hooks such as useEffect and useState to properly keep track of the component's state and render them under certain conditions.
+- React
+- HTML
+- CSS
+- Different components such as Login, Register, and ChatRoom were created to comply with the principle of separation of concern.
+- Usage of Axios to make HTTP requests
+- Usage of React library hooks such as useEffect and useState to properly keep track of the component's state and render them under certain conditions.
 
 <a name="improvements"></a>
 ## Future Improvements Ideas
