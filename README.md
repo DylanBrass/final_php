@@ -1,4 +1,4 @@
-# Getting Started with Create React App - Chat Room PHP Project Front End
+# Chat Room PHP Project Front End
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
