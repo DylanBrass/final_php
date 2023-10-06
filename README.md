@@ -39,32 +39,38 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# The Greatest Teacher_FrontEnd
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Overview
+Done throughout my second year of College in Computer Science for my Java class, the Greatest Teacher project's purpose was to develop an application that allows a user to rate teachers and view their performances using Axios for the HTTP requests and React libraries for the UI. This is the front-end documentation of the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Table of Contents
+- [Project Description](#project-description)
+- [Technologies used](#technologies)
+- [Challenges](#challenges)
+- [Future Improvements Ideas](#improvements)
 
-### Code Splitting
+<a name="project-description"></a>
+## Project Description 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Application's purpose
+The application is a dynamic chat room where users gain access by signing in with valid credentials (username and password). Once successfully authenticated, users can unlock the full chat room experience. This includes access to a list of registered users, enabling them to initiate conversations with fellow users.
 
-### Analyzing the Bundle Size
+#### Screenshots of application in desktop view:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Login and Sign in
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/0ba80f0a-c4d8-459e-b0a8-f0e759b64b49)
+#### Chat Session![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/3d50c0cc-8128-4d64-b0c0-d618ce8c2ff5)
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/cde627a8-987b-4dbe-b45d-7f5a046a237b)
+#### Sending Images
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/60cc2350-101b-4d7b-8bbe-900321dd0452)
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/ca007988-eaac-47d3-bb4f-0fe3de00bfef)
 
-### Making a Progressive Web App
+<a name="technologies"></a>
+## Technologies used when building the application
+The front-end was done with React, HTML and CSS. Different components such as Login, Register, and ChatRoom were created to comply to the principle of separation of concern. We used axios to make the HTTP requests and some React library hooks such as useEffect and useState to properly keep track of the component's state and render them under certain conditions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a name="improvements"></a>
+## Future Improvements Ideas
+1. I would like to improve the front-end to be more user-frendly and more chat looking.
+2. I would like to add the feature of creating chat groups in which multiple people can interact with each other.
