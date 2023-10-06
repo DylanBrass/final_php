@@ -42,14 +42,14 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Table of Contents
 - [Project Description](#project-description)
 - [Technologies used](#technologies)
-- [Challenges](#challenges)
+- [Axios Code Snippets](#axios)
 - [Future Improvements Ideas](#improvements)
 
 <a name="project-description"></a>
 ## Project Description 
 
 ### Application's purpose
-The application is a dynamic chat room where users gain access by signing in with valid credentials (username and password). Once successfully authenticated, users can unlock the full chat room experience. This includes access to a list of registered users, enabling them to initiate conversations with fellow users.
+The application is a dynamic chat room where users gain access by signing in with valid credentials (username and password). Once successfully authenticated, users can unlock the full chat room experience. This includes access to a list of registered users, enabling them to initiate conversations with fellow users. This is the front-end documentation of the application.
 
 #### Screenshots of application in desktop view:
 
@@ -71,7 +71,16 @@ The application is a dynamic chat room where users gain access by signing in wit
 - Usage of Axios to make HTTP requests
 - Usage of React library hooks such as useEffect and useState to properly keep track of the component's state and render them under certain conditions.
 
+<a name="axios"></a>
+## Axios Code Snippets
+### Create User
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/4510488a-a1b7-4a6e-9ca1-470d6c461f95)
+### User Log in
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/03c80c6d-951a-43fd-b34c-9de2fb02c3aa)
+### Messages
+![image](https://github.com/DylanBrass/project_php_frontend/assets/46633364/f97f2340-c620-4a19-9529-1d370d92cbbd)
+
 <a name="improvements"></a>
 ## Future Improvements Ideas
 1. I would like to improve the front-end to be more user-frendly and more chat looking.
-2. I would like to add the feature of creating chat groups in which multiple people can interact with each other.
+2. I would like to add a feature of creating chat groups in which multiple users can interact with each other.
